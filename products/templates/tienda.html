@@ -1,4 +1,4 @@
-{% extends 'triven/base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 
 {% block content %}
@@ -101,9 +101,10 @@
                                         </div> -->
                                         <p class="card-text product-description flex-grow-1">{{ producto.description }}</p>
                                         <button class="btn-sm btn-danger" ><span class="fs-4 fw-bold text-primary price">Cantidad:{{ producto.cantidad }}</span></button>
-                                        <span class="fs-4 fw-bold text-warning price-bolivar">{{ producto.price_ves|floatformat:2 }}Bs</span>
+                                        <span class="fs-4 fw-bold text-success price">{{ producto.price }}$</span>
                                         <div class="d-flex justify-content-between align-items-center mt-3">
-                                            <span class="fs-4 fw-bold text-success price">{{ producto.price }}$</span>
+                                            
+                                            <span class="fs-4 fw-bold text-warning price-bolivar">{{ producto.price_ves|floatformat:2 }}Bs</span>
                                             <button class="btn btn-primary btn-sm"><i class="fa-solid fa-cart-plus me-1"></i>Añadir</button>
                                         </div>
                                     </div>

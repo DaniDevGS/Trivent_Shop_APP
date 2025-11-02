@@ -1,4 +1,4 @@
-Actua como desarrollador Full Stack y mejora el Frontend para la responsividad
+Actua como desarrollador Full Stack y mejora el Frontend para la responsividad usando Bootstrap
 
 
 triven/base.html
