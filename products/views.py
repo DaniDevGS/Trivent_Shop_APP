@@ -9,12 +9,9 @@ from .models import Producto
 from.conversion import get_exchange_rate
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
-from rest_framework import generics
-from rest_framework.permissions import IsAuthenticated
 from decimal import Decimal
 # Create your views here.
 # Create your views here.
-from rest_framework.decorators import api_view, permission_classes # New
 
 # ===============================================================================================================
 #===================================DJANGO ==================================================================
@@ -120,6 +117,7 @@ def index(request):
     
     return render(request, 'index.html', {'productos': productos, 'sent_view': True})
 
+
 def products_store(request):
     productos = Producto.objects.filter(datecompleted__isnull=False).order_by('-datecompleted')
     numero_productos = productos.count()
@@ -143,6 +141,8 @@ def products_store(request):
 def carrito(request):
     return render(request, 'carrito.html')
 
+def user_details(request):
+    return render(request, 'user_detail.html')
 
 def signup(request):
     """Gestiona el registro de nuevos usuarios.

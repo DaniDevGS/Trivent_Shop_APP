@@ -5,11 +5,11 @@
         <main>
             
             <!-- ================================================================SECCION HERO==================================================================== -->
-            <section class="p-5 text-center bg-dark text-white main-section" style="background-image: url('URL_DE_TU_IMAGEN_DE_FONDO'); background-size: cover; background-position: center; min-height: 400px; display: flex; align-items: center; justify-content: center;">
+            <section class="p-5 text-center bg-dark text-white main-section" style="background-size: cover; background-position: center; min-height: 400px; display: flex; align-items: center; justify-content: center;">
                 <div class="title bg-dark bg-opacity-75 p-4 rounded">
-                    <h1 class="display-3 fw-bold text-warning">Trivens Smart Shop</h1>
+                    <h1 class="display-5 display-md-3 fw-bold text-warning">Trivens Smart Shop</h1>
                     <p class="lead mb-4">Precios confiables y productos de calidad.</p>
-                    <a href="/tienda/" class="btn btn-primary btn-lg boton_store">Ver Tienda</a>
+                    <a href="{% url 'tienda' %}" class="btn btn-danger btn-lg rounded-pill boton_store">Ver Tienda</a>
                 </div>
             </section>
             <!-- ==================================================================================================================================================== -->
@@ -18,26 +18,26 @@
             <!-- ================================================================SECCION NOSOTROS==================================================================== -->
             <section class="container py-5 section-info">
                 <h2 class="text-center mb-5 fw-bold title-info">¿Por qué nosotros?</h2>
-                <div class="row text-center">
-                    <div class="col-md-3 mb-4">
+                <div class="row text-center row-cols-2 row-cols-md-4 g-4">
+                    <div class="col">
                         <div class="p-4 border rounded shadow-sm h-100 d-flex flex-column align-items-center logues">
                             <i class="fa-solid fa-bolt fa-3x text-primary mb-3"></i>
                             <p class="fw-bold">Compra Rápida</p>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-4">
+                    <div class="col">
                         <div class="p-4 border rounded shadow-sm h-100 d-flex flex-column align-items-center logues">
                             <i class="fa-solid fa-shield fa-3x text-success mb-3"></i>
                             <p class="fw-bold">Pago Seguro</p>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-4">
+                    <div class="col">
                         <div class="p-4 border rounded shadow-sm h-100 d-flex flex-column align-items-center logues">
                             <i class="fa-solid fa-truck-fast fa-3x text-warning mb-3"></i>
                             <p class="fw-bold">Envío Gratis</p>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-4">
+                    <div class="col">
                         <div class="p-4 border rounded shadow-sm h-100 d-flex flex-column align-items-center logues">
                             <i class="fa-solid fa-credit-card fa-3x text-danger mb-3"></i>
                             <p class="fw-bold">Múltiples Métodos</p>
@@ -79,7 +79,7 @@
                 <div class="products-title text-center mb-5">
                     <h2 class="fw-bold">Explora Nuestras Categorías</h2>
                 </div>
-                <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
                     
                     <div class="col">
                         <div class="card text-center bg-info text-white shadow-lg category" style="min-height: 200px; display: flex; align-items: center; justify-content: center;">
@@ -113,7 +113,7 @@
         <!-- =================================================================================================================================================== -->
 
         <!-- =======================================================FOOTER DE CONTACTOS========================================================================== -->
-        <footer class="bg-dark text-white pt-4 pb-2">
+        <footer class="bg-dark text-white pt-4 pb-2 container-fluid">
             <div class="container text-center">
                 <div class="social-media mb-3">
                     <a href="#" class="text-white mx-2"><i class="fa-brands fa-instagram fa-2x"></i></a>
@@ -124,7 +124,8 @@
                 <div class="footer-logo mb-3">
                     <img src="{% static 'img/Logo_Triven.svg' %}" width="70" alt="Logotipo Trivens">
                 </div>
-                <p class="text-muted"><small>&copy; 2025 Trivens Smart Shop. Todos los derechos reservados.</small></p>
+                <p class="text-center"><small>&copy; 2025 Triven Smart Shop. Todos los derechos reservados.</small></p>
+                
             </div>
         </footer>
 {% endblock %}
